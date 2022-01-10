@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins&family=Raleway:wght@400;500;700&display=swap');
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-color: black;
+    font-family: 'Raleway', sans-serif;
+}
+.container{
+    max-width: 1200px;
+     margin: 0 auto;
+ }
+nav{
+    height: 80px;
+line-height: 30px;
+}
+nav>ul{
+    display: flex;
+    justify-content: space-between;
+}
+nav>ul>li{
+    list-style: none;
+    padding:0 10px;
+    margin-top: 10px;
+}
+nav>ul >li:hover{
+    background-color: tomato;
+}
+nav ul li a{
+    color:white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    padding:0 10px;
+}
+.dropdown{
+    display:none;
+    position: absolute;
+}
+nav>ul>li:hover>ul{
+    display: block;  
+}
+nav>ul>li>ul>li>a{
+    color:black;
+    background-color: white;
+    font-size: 15px;
+}
+.banner{
+    display: flex;
+    height: 100vh;
+    justify-content: space-between;
+}
+.banner-left{
+    flex:1;
+    display:flex;
+    align-items: center;
+    color: white;  
+}
+.banner-heading{
+    font-size: 47px;
+    white-space: nowrap;
+    position: relative;
+    color: transparent;
+}
+.banner-heading::before{
+    content: 'WELLCOME TO MY WEBSITE';
+   position: absolute;
+   color: tomato;
+   animation: typing 5s linear infinite;
+}
+@keyframes typing {
+    0%{
+        content: 'W|';
+    }
+    4%{
+        content:'WE|';
+    }
+    8%{
+        content:'WEL|';
+    }
+    12%{
+        content:'WELL|';
+    }
+    16%{
+        content:'WELLC|';
+    }
+    20%{
+        content:'WELLCO|';
+    }
+    24%{
+        content:'WELLCOM|';
+    }
+    28%{
+        content:'WELLCOME|';
+    }
+    32%{
+        content:'WELLCOME T|';
+    }
+    36%{
+        content:'WELLCOME TO|';
+    }
+    40%{
+        content:'WELLCOME TO M|';
+    }
+    44%{
+        content:'WELLCOME TO MY|';
+    }
+    48%{
+        content:'WELLCOME TO MY W|';
+    }
+    52%{
+        content:'WELLCOME TO MY WE|';
+    }
+    56%{
+        content:'WELLCOME TO MY WEB|';
+    }
+    60%{
+        content:'WELLCOME TO MY WEBS|';
+    }
+    64%{
+        content:'WELLCOME TO MY WEBSI|';
+    }
+    68%{
+        content:'WELLCOME TO MY WEBSIT|';
+    }
+    72%,80%{
+        content:'WELLCOME TO MY WEBSITE|';
+    }
+    81%{
+        content:'WELLCOME TO MY WEBSIT|';
+    }
+    82%{
+        content:'WELLCOME TO MY WEBSI|';
+    }
+    83%{
+        content:'WELLCOME TO MY WEBS|';
+    }
+    84%{
+        content:'WELLCOME TO MY WEB|';
+    }
+    85%{
+        content:'WELLCOME TO MY WE|';
+    }
+    86%{
+        content:'WELLCOME TO MY W|';
+    }
+    87%{
+        content:'WELLCOME TO MY|';
+    }
+    88%{
+        content:'WELLCOME TO M|';
+    }
+    89%{
+        content:'WELLCOME TO|';
+    }
+    90%{
+        content:'WELLCOME T|';
+    }
+    91%{
+        content:'WELLCOME|';
+    }
+    92%{
+        content:'WELLCOM|';
+    }
+    93%{
+        content:'WELLCO|';
+    }
+    94%{
+        content:'WELLC|';
+    }
+    95%{
+        content:'WELL|';
+    }
+    96%{
+        content:'WEL|';
+    }
+    97%{
+        content:'WE|';
+    }
+    98%{
+        content':|';
+    }
+    99%,100%{
+        content:'|';
+    }
+       
+}
+.banner-content{
+    font-size: 20px;
+    text-align: justify;
+    line-height: 30px;
+    margin:20px 0;
+}
+.banner-right{
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner-pic{
+    height: 90%;
+    width: 95%;
+}
+button>a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+} 
+button{
+    outline: 0;
+    padding: 6px 12px;
+    background-color:tomato;
+    border: 4px solid tomato;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .5s linear;
+}
+button:hover{
+    background-color: transparent;
+}
+.gallery-title{
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    margin-bottom: 60px;
+}
+.photoframe{
+    height: 280px;
+    width:280px;
+    position: relative;
+    overflow: hidden;
+}
+.photoframe img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.border{
+    background-color: white;
+    position: absolute;
+    transition: 0.6s ease-in-out;
+}
+.border.top, .border.bottom{
+    height:4px;
+    width:270px;
+}
+.border.left, .border.right{
+    height:270px;
+    width: 4px;
+}
+.border.top{
+    top:5px;
+    right:100%;
+}
+.border.right{
+    right:5px;
+    bottom:100%;
+}
+.border.left{
+    left:5px;
+    top:100%;
+}
+.border.bottom{
+    bottom:5px;
+    left:100%;
+}
+.photoframe:hover .border.top{
+right:5px;
+}
+.photoframe:hover .border.bottom{
+    left:5px;
+}
+.photoframe:hover .border.left{
+    top:5px;
+}
+.photoframe:hover .border.right{
+    bottom:5px;
+}
+.photo-content{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    color:white;
+    top:0;
+    transform: translate(80px,400px);
+    transition: 0.5s ease-in-out;
+}
+.photoframe:hover .photo-content{
+    transform: translate(80px,220px);
+}
+.photoframe::before{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0,.5);
+    opacity: 0;
+    transition: 0.5s linear;
+}
+.photoframe:hover::before{
+    opacity: 1;
+}
+.gallery-item{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
